@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="za.co.resolutioncircle.testbed"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="za.co.resolutioncircle.testbed.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="za.co.resolutioncircle.testbed.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="za.co.resolutioncircle.testbed.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="za.co.resolutioncircle.testbed.MainActivity" />
+        </activity>
+        <activity
+            android:name="za.co.resolutioncircle.testbed.BlankActivity"
+            android:label="@string/title_activity_blank" >
+        </activity>
+        <activity
+            android:name="za.co.resolutioncircle.testbed.ContactsLoader"
+            android:label="@string/title_activity_contacts_loader" >
+        </activity>
+        <activity
+            android:name="za.co.resolutioncircle.testbed.MySettingsActivity"
+            android:label="@string/title_activity_my_settings" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="za.co.resolutioncircle.testbed.ContactsList"
+            android:label="@string/title_activity_contacts_list"
+            android:parentActivityName="za.co.resolutioncircle.testbed.MySettingsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="za.co.resolutioncircle.testbed.MySettingsActivity" />
+        </activity>
+    </application>
+
+</manifest>
